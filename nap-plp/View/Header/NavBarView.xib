@@ -7,26 +7,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScreenHeaderView" customModule="nap_plp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavBarView" customModule="nap_plp" customModuleProvider="target">
             <connections>
-                <outlet property="screenHeader" destination="4Ou-pi-rBw" id="iTH-5o-5aa"/>
+                <outlet property="accountBarButtonItem" destination="zVZ-GJ-2Ce" id="nrO-wQ-8lM"/>
+                <outlet property="backBarButtonItem" destination="Xq2-rR-Wbv" id="INM-4K-FeH"/>
+                <outlet property="shopBagBarButtonItem" destination="8BC-M8-a94" id="dCE-4Q-xTG"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="NavBarCollectionView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ou-pi-rBw">
-                    <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmA-cl-f6g">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
+                    <items>
+                        <navigationItem id="0qm-UZ-SbF">
+                            <nil key="title"/>
+                            <barButtonItem key="leftBarButtonItem" style="plain" id="Xq2-rR-Wbv">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9tD-bb-yMW" userLabel="BackBarButtonItem">
+                                    <rect key="frame" x="20" y="11" width="16" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                    <state key="normal" image="nav-bar-back"/>
+                                </button>
+                            </barButtonItem>
+                            <rightBarButtonItems>
+                                <barButtonItem style="plain" id="8BC-M8-a94">
+                                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UEE-zI-gqa" userLabel="ShopBagButtonItem">
+                                        <rect key="frame" x="378" y="11" width="16" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="nav-bar-bag"/>
+                                    </button>
+                                </barButtonItem>
+                                <barButtonItem style="plain" id="zVZ-GJ-2Ce">
+                                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TvF-JM-ilH" userLabel="AccountBarButtonItem">
+                                        <rect key="frame" x="354" y="11" width="16" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="nav-bar-account"/>
+                                    </button>
+                                </barButtonItem>
+                            </rightBarButtonItems>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="82.608695652173921" y="-64.955357142857139"/>
+            <point key="canvasLocation" x="111.59420289855073" y="-63.616071428571423"/>
         </view>
     </objects>
+    <resources>
+        <image name="nav-bar-account" width="16" height="16"/>
+        <image name="nav-bar-back" width="16" height="16"/>
+        <image name="nav-bar-bag" width="16" height="16"/>
+    </resources>
 </document>

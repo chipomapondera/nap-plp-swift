@@ -1,5 +1,5 @@
 //
-//  FilterBar.swift
+//  FilterBarView.swift
 //  nap-plp
 //
 //  Created by Chipo Mapondera on 19/06/2020.
@@ -8,41 +8,16 @@
 
 import UIKit
 
-@IBDesignable class FilterBar: UIView {
+@IBDesignable class FilterBarView: ProductListScreenView {
     
-    let xibName = "FilterBar"
-    var contentView:UIView?
+    let xibName = "FilterBarView"
     
+    @IBOutlet weak var refineLabel: UILabel!
+    @IBOutlet weak var sortByLabel: UILabel!
+    @IBOutlet weak var recommendedLabel: UILabel!
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        commonInit()
-        contentView?.prepareForInterfaceBuilder()
-    }
-    
-    private func commonInit() {
-        guard let view = loadViewFromXib() else {return}
-        view.frame = self.bounds
-        self.addSubview(view)
-        contentView = view
-    }
-    
-    func loadViewFromXib() -> UIView? {
+        
+    override func loadViewFromXib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let xib = UINib(nibName: xibName, bundle: bundle)
         return xib.instantiate(withOwner: self, options: nil).first as? UIView

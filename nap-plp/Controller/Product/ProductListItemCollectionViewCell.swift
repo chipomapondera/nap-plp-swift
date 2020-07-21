@@ -1,5 +1,5 @@
 //
-//  ScreenHeader.swift
+//  ProductListItemCollectionViewCell.swift
 //  nap-plp
 //
 //  Created by Chipo Mapondera on 18/06/2020.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-
-@IBDesignable class ScreenHeaderView: ProductListScreenView {
+@IBDesignable class ProductListItemCollectionViewCell: ProductListScreenView {
     
-    let xibName = "ScreenHeaderView"
+    let xibName = "ProductListItemCollectionViewCell"
     
-    @IBOutlet weak var categoryName: UILabel!
-    @IBOutlet weak var resultsLabel: UILabel!
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productDescription: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
+    @IBOutlet weak var productBadge: UILabel!
     
     override func loadViewFromXib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
