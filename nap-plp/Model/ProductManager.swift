@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct ProductManager {
     let productUrl = "https://api.net-a-porter.com/NAP/GB/en/60/0/summaries?categoryIds=2"
@@ -34,12 +35,17 @@ struct ProductManager {
     
     func parseJSON(productData: Data) {
         let decoder = JSONDecoder()
+        var products = [Int: ProductData]()
+        
         do {
             let decodedData = try decoder.decode(ProductData.self, from: productData)
-            print(decodedData.summaries[0].name);
-            print(decodedData.summaries[0].price.currency);
-            print(decodedData.summaries[0].price.divisor);
-            print(decodedData.summaries[0].price.amount);
+            let parsedData = decodedData.summaries
+            
+//            let currency = parsedData[0].price.currency
+//            let amount = parsedData[0].price.amount
+//            let divisor = parsedData[0].price.divisor
+//            let productPrice = "\(currency)\(amount/divisor)"
+
         } catch {
             print(error)
         }
