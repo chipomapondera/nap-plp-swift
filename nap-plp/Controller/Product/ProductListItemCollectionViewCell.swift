@@ -8,18 +8,14 @@
 
 import UIKit
 
-@IBDesignable class ProductListItemCollectionViewCell: ProductListScreenView {
+@IBDesignable class ProductListItemCollectionViewCell: UICollectionViewCell {
     
     let xibName = "ProductListItemCollectionViewCell"
     
     @IBOutlet weak var productImage: UIImageView!
-    @IBOutlet weak var productDescription: UILabel!
+    @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productPrice: UILabel!
     @IBOutlet weak var productBadge: UILabel!
     
-    override func loadViewFromXib() -> UIView? {
-        let bundle = Bundle(for: type(of: self))
-        let xib = UINib(nibName: xibName, bundle: bundle)
-        return xib.instantiate(withOwner: self, options: nil).first as? UIView
-    }
+    
 }

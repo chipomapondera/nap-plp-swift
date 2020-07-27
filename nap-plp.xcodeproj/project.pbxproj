@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,8 @@
 		40109FE524C5EBF50086663C /* FooterBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40109FE424C5EBF50086663C /* FooterBarView.swift */; };
 		40391D6B249CC8C4007FADD6 /* FilterBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40391D6A249CC8C4007FADD6 /* FilterBarView.xib */; };
 		40391D6D249CC93B007FADD6 /* FilterBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40391D6C249CC93B007FADD6 /* FilterBarView.swift */; };
+		404085F824CB1F9B00B17C1F /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404085F724CB1F9B00B17C1F /* ProductManager.swift */; };
+		404085FA24CB3BD800B17C1F /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404085F924CB3BD800B17C1F /* ProductData.swift */; };
 		40460557249C038D00482532 /* NavBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40460556249C038D00482532 /* NavBarView.xib */; };
 		4046055B249C04D900482532 /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046055A249C04D900482532 /* NavBarView.swift */; };
 		40462579249B7CCF002972F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40462578249B7CCF002972F3 /* AppDelegate.swift */; };
@@ -24,13 +26,17 @@
 		409E680324C5FFF800F641CD /* ProductListScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E680224C5FFF800F641CD /* ProductListScreenView.swift */; };
 		40C357E6249C0E410041DBE2 /* ScreenHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40C357E5249C0E410041DBE2 /* ScreenHeaderView.xib */; };
 		40C357E8249C0E610041DBE2 /* ScreenHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C357E7249C0E610041DBE2 /* ScreenHeaderView.swift */; };
+		A8CD560959BA467FAB3BCF81 /* Pods_nap_plp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C7959B5B4573A7169BED5B /* Pods_nap_plp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22C7959B5B4573A7169BED5B /* Pods_nap_plp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nap_plp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40109FDF24C5E2790086663C /* FooterBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterBarView.xib; sourceTree = "<group>"; };
 		40109FE424C5EBF50086663C /* FooterBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterBarView.swift; sourceTree = "<group>"; };
 		40391D6A249CC8C4007FADD6 /* FilterBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterBarView.xib; sourceTree = "<group>"; };
 		40391D6C249CC93B007FADD6 /* FilterBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBarView.swift; sourceTree = "<group>"; };
+		404085F724CB1F9B00B17C1F /* ProductManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
+		404085F924CB3BD800B17C1F /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
 		40460556249C038D00482532 /* NavBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavBarView.xib; sourceTree = "<group>"; };
 		4046055A249C04D900482532 /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 		40462575249B7CCF002972F3 /* nap-plp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nap-plp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +52,8 @@
 		409E680224C5FFF800F641CD /* ProductListScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListScreenView.swift; sourceTree = "<group>"; };
 		40C357E5249C0E410041DBE2 /* ScreenHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenHeaderView.xib; sourceTree = "<group>"; };
 		40C357E7249C0E610041DBE2 /* ScreenHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenHeaderView.swift; sourceTree = "<group>"; };
+		72B08DC54A4D6531771C5333 /* Pods-nap-plp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nap-plp.release.xcconfig"; path = "Target Support Files/Pods-nap-plp/Pods-nap-plp.release.xcconfig"; sourceTree = "<group>"; };
+		8237FDA04918D8CFB9381A9B /* Pods-nap-plp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nap-plp.debug.xcconfig"; path = "Target Support Files/Pods-nap-plp/Pods-nap-plp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8CD560959BA467FAB3BCF81 /* Pods_nap_plp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,10 +81,10 @@
 		403C00FA249BF76900FA17C0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4046257C249B7CCF002972F3 /* ViewController.swift */,
 				40109FE324C5EBA20086663C /* Header */,
 				4046259C249B866A002972F3 /* ProductListItemCollectionViewCell.swift */,
 				40109FE424C5EBF50086663C /* FooterBarView.swift */,
-				409E680224C5FFF800F641CD /* ProductListScreenView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -90,6 +99,16 @@
 				40109FDF24C5E2790086663C /* FooterBarView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		404085F624CB1F7A00B17C1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				404085F724CB1F9B00B17C1F /* ProductManager.swift */,
+				404085F924CB3BD800B17C1F /* ProductData.swift */,
+				409E680224C5FFF800F641CD /* ProductListScreenView.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		40460559249C03F200482532 /* Header */ = {
@@ -107,6 +126,8 @@
 			children = (
 				40462577249B7CCF002972F3 /* nap-plp */,
 				40462576249B7CCF002972F3 /* Products */,
+				F233EC71437D8F7698F19F22 /* Pods */,
+				4FA02297AB869A7D0D844B39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,15 +142,32 @@
 		40462577249B7CCF002972F3 /* nap-plp */ = {
 			isa = PBXGroup;
 			children = (
+				404085F624CB1F7A00B17C1F /* Model */,
 				403C00FB249BF79700FA17C0 /* View */,
 				403C00FA249BF76900FA17C0 /* Controller */,
 				40462578249B7CCF002972F3 /* AppDelegate.swift */,
 				4046257A249B7CCF002972F3 /* SceneDelegate.swift */,
-				4046257C249B7CCF002972F3 /* ViewController.swift */,
 				40462581249B7CD0002972F3 /* Assets.xcassets */,
 				40462586249B7CD0002972F3 /* Info.plist */,
 			);
 			path = "nap-plp";
+			sourceTree = "<group>";
+		};
+		4FA02297AB869A7D0D844B39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22C7959B5B4573A7169BED5B /* Pods_nap_plp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F233EC71437D8F7698F19F22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8237FDA04918D8CFB9381A9B /* Pods-nap-plp.debug.xcconfig */,
+				72B08DC54A4D6531771C5333 /* Pods-nap-plp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40462589249B7CD0002972F3 /* Build configuration list for PBXNativeTarget "nap-plp" */;
 			buildPhases = (
+				45719313EBD68536AB0CB943 /* [CP] Check Pods Manifest.lock */,
 				40462571249B7CCF002972F3 /* Sources */,
 				40462572249B7CCF002972F3 /* Frameworks */,
 				40462573249B7CCF002972F3 /* Resources */,
+				C0B317F1AC124716FCCECB7A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,12 +243,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45719313EBD68536AB0CB943 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nap-plp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0B317F1AC124716FCCECB7A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nap-plp/Pods-nap-plp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nap-plp/Pods-nap-plp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nap-plp/Pods-nap-plp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		40462571249B7CCF002972F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				409E680324C5FFF800F641CD /* ProductListScreenView.swift in Sources */,
+				404085FA24CB3BD800B17C1F /* ProductData.swift in Sources */,
+				404085F824CB1F9B00B17C1F /* ProductManager.swift in Sources */,
 				40C357E8249C0E610041DBE2 /* ScreenHeaderView.swift in Sources */,
 				40109FE524C5EBF50086663C /* FooterBarView.swift in Sources */,
 				40391D6D249CC93B007FADD6 /* FilterBarView.swift in Sources */,
@@ -358,6 +442,7 @@
 		};
 		4046258A249B7CD0002972F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8237FDA04918D8CFB9381A9B /* Pods-nap-plp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +461,7 @@
 		};
 		4046258B249B7CD0002972F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72B08DC54A4D6531771C5333 /* Pods-nap-plp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
