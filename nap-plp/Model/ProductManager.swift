@@ -13,10 +13,14 @@ struct ProductManager {
     let productUrl = "https://api.net-a-porter.com/NAP/GB/en/60/0/summaries?categoryIds=2"
     
     func fetchProducts() {
-        performRequest(productURL: productUrl)
+        performRequest(productURL: productUrl){(products) -> () in
+            print(products)
+        }
     }
     
-    func performRequest(productURL: String) {
+    func performRequest(productURL: String, completion: (Array<Dictionary<String, AnyObject>>) -> ()) {
+        let products = [[String: AnyObject]]()
+        
         if let url = URL(string: productURL) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
@@ -31,16 +35,13 @@ struct ProductManager {
             }
             task.resume()
         }
+        completion(products)
     }
     
     func parseJSON(productData: Data) {
         let decoder = JSONDecoder()
-        var products = [Int: ProductData]()
-        
         do {
             let decodedData = try decoder.decode(ProductData.self, from: productData)
-            let parsedData = decodedData.summaries
-            
 //            let currency = parsedData[0].price.currency
 //            let amount = parsedData[0].price.amount
 //            let divisor = parsedData[0].price.divisor

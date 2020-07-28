@@ -62,39 +62,5 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let cellWidth = collectionView.frame.size.width
         return CGSize(width: cellWidth, height: cellWidth*0.8)
     }
-    
-//    let productUrl = URL(string: "https://api.net-a-porter.com/NAP/GB/en/60/0/summaries?categoryIds=2")
-//    
-//    func loadData(){
-//        let session = URLSession.shared.dataTask(with: URLRequest(url: productUrl!)) { (data, response, error) in
-//            if let httpResponse = response as? HTTPURLResponse {
-//                if(httpResponse.statusCode != 200) {
-//                    //ERROR MESSAGE APPEARS
-//                }
-//            }
-//            
-//            if let productData = data {
-//                if let json = try? JSONSerialization.jsonObject(with: productData, options: []) as? Dictionary<String,Any> {
-//                    if let statusCode = json["status"] as? String {
-//                        if(statusCode == "ok") {
-//                            if let products = json["products"] as? Array<Dictionary<String,Any>> {
-//                                self.products = products;
-//                                DispatchQueue.main.async {
-//                                    self.collectionView.reloadData()
-//                                }
-//                            } else {
-//                                //ERROR, API REQUEST NOT OK
-//                            }
-//                        }
-//                    } else {
-//                        //ERROR, API REQUEST NOT OK
-//                    }
-//                } else {
-//                    print("Error");
-//                }
-//            }
-//        }
-//        session.resume();
-//    }
 }
 
