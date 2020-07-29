@@ -11,14 +11,21 @@ import UIKit
 
 @IBDesignable class ScreenHeaderView: ProductListScreenView {
     
+    var view = ViewController()
+    
     let xibName = "ScreenHeaderView"
     
     @IBOutlet weak var categoryName: UILabel!
     @IBOutlet weak var resultsLabel: UILabel!
-    
+        
     override func loadViewFromXib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let xib = UINib(nibName: xibName, bundle: bundle)
         return xib.instantiate(withOwner: self, options: nil).first as? UIView
     }
+    
+//    func getResults() {
+//        let numberOfResults = view.products.count
+//        print(numberOfResults)
+//    }
 }

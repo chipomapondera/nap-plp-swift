@@ -9,17 +9,22 @@
 import Foundation
 import UIKit
 
+protocol ProductManagerDelegate {
+    func getProducts(products: [ProductData.Summaries])
+}
+
 struct ProductManager {
-    let productUrl = "https://api.net-a-porter.com/NAP/GB/en/60/0/summaries?categoryIds=2"
+    let productUrl = "https://api.net-a-porter.com/NAP/GB/en/1/0/summaries?categoryIds=2"
+    var delegate: ProductManagerDelegate?
     
     func fetchProducts() {
-        performRequest(productURL: productUrl){(products) -> () in
-            print(products)
+        performRequest(productURL: productUrl){(products) -> () in            
+                print(products)
+            self.delegate?.getProducts(products: products)
         }
     }
     
-    func performRequest(productURL: String, completion: (Array<Dictionary<String, AnyObject>>) -> ()) {
-        let products = [[String: AnyObject]]()
+    func performRequest(productURL: String, completion: @escaping ([ProductData.Summaries]) -> Void) {
         
         if let url = URL(string: productURL) {
             let session = URLSession(configuration: .default)
@@ -30,25 +35,17 @@ struct ProductManager {
                 }
                 
                 if let safeData = data {
-                    self.parseJSON(productData: safeData)
+                    self.parseJSON(productData: safeData, completion: completion)
                 }
             }
             task.resume()
         }
-        completion(products)
     }
     
-    func parseJSON(productData: Data) {
+    func parseJSON(productData: Data, completion: @escaping ([ProductData.Summaries]) -> Void) {
         let decoder = JSONDecoder()
-        do {
-            let decodedData = try decoder.decode(ProductData.self, from: productData)
-//            let currency = parsedData[0].price.currency
-//            let amount = parsedData[0].price.amount
-//            let divisor = parsedData[0].price.divisor
-//            let productPrice = "\(currency)\(amount/divisor)"
-
-        } catch {
-            print(error)
+        if let response = try? decoder.decode(ProductData.self, from: productData) {
+            completion(response.summaries)
         }
     }
 }

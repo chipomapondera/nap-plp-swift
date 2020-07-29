@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ProductManagerDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var products: Array<Dictionary<String,Any>> = [];
+    var product = 60
     var productManager = ProductManager()
     
     override func viewDidLoad() {
@@ -20,6 +20,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.dataSource = self;
         collectionView.register(UINib(nibName: "ProductListItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "productCell");
         productManager.fetchProducts();
+        productManager.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,34 +28,38 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Dispose of any resources that can be recreated.
     }
     
+    func getProducts(products: [ProductData.Summaries]) {
+        print(products)
+    }
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1;
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return products.count
+        return product
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let row = products[indexPath.row];
+//        let row = products[indexPath.row];
         let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as! ProductListItemCollectionViewCell;
         
-        if let name = row["name"] as? String {
-            productCell.productName.text = name;
-        }
-        
-        if let price = row["price"] as? String{
-            productCell.productPrice.text = price
-        }
-        
-        if let badge = row["badges"] as? String{
-            productCell.productBadge.text = badge
-        }
-        
-        if let image = row["images"] as? UIImage{
-            productCell.productImage.image = image
-        }
-        
+//        if let name = row["name"] as? String {
+//            productCell.productName.text = name;
+//        }
+//
+//        if let price = row["price"] as? String{
+//            productCell.productPrice.text = price
+//        }
+//
+//        if let badge = row["badges"] as? String{
+//            productCell.productBadge.text = badge
+//        }
+//
+//        if let image = row["images"] as? UIImage{
+//            productCell.productImage.image = image
+//        }
+//
         return productCell;
     }
     
