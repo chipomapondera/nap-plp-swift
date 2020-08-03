@@ -93,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				4046257E249B7CCF002972F3 /* Main.storyboard */,
-				40462583249B7CD0002972F3 /* LaunchScreen.storyboard */,
 				40460559249C03F200482532 /* Header */,
 				4046258C249B7CF6002972F3 /* ProductListItemCollectionViewCell.xib */,
 				40109FDF24C5E2790086663C /* FooterBarView.xib */,
@@ -148,6 +147,7 @@
 				40462578249B7CCF002972F3 /* AppDelegate.swift */,
 				4046257A249B7CCF002972F3 /* SceneDelegate.swift */,
 				40462581249B7CD0002972F3 /* Assets.xcassets */,
+				40462583249B7CD0002972F3 /* LaunchScreen.storyboard */,
 				40462586249B7CD0002972F3 /* Info.plist */,
 			);
 			path = "nap-plp";
