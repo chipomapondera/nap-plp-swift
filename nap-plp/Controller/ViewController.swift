@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ProductManagerDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var product = 60
+    
     var productManager = ProductManager()
+    var products = [ProductData.Summaries]()
+//        = [
+//        ProductData.Summaries(name: "Print dress", badges: ["EXCLUSIVE"]),
+//        ProductData.Summaries(name: "Long dress", badges: ["SALE"]),
+//        ProductData.Summaries(name: "Striped dress", badges: ["EXCLUSIVE"])
+//    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +26,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.dataSource = self;
         collectionView.register(UINib(nibName: "ProductListItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "productCell");
         productManager.fetchProducts();
-        productManager.delegate = self
+//        productManager.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,43 +35,47 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func getProducts(products: [ProductData.Summaries]) {
-        print(products)
+        print("getProducts function is running")
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1;
     }
     
+}
+
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return product
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let row = products[indexPath.row];
-        let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as! ProductListItemCollectionViewCell;
+            return products.count
+        }
         
-//        if let name = row["name"] as? String {
-//            productCell.productName.text = name;
-//        }
-//
-//        if let price = row["price"] as? String{
-//            productCell.productPrice.text = price
-//        }
-//
-//        if let badge = row["badges"] as? String{
-//            productCell.productBadge.text = badge
-//        }
-//
-//        if let image = row["images"] as? UIImage{
-//            productCell.productImage.image = image
-//        }
-//
-        return productCell;
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = collectionView.frame.size.width
-        return CGSize(width: cellWidth, height: cellWidth*0.8)
-    }
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let row = products[indexPath.row];
+            let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath)
+            
+            let name: String = products[0].name
+            productCell = name;
+
+    //
+    //        if let price = row["price"] as? String{
+    //            productCell.productPrice.text = price
+    //        }
+    //
+    //        if let badge = row["badges"] as? String{
+    //            productCell.productBadge.text = badge
+    //        }
+    //
+    //        if let image = row["images"] as? UIImage{
+    //            productCell.productImage.image = image
+    //        }
+    //
+            return productCell;
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let cellWidth = collectionView.frame.size.width
+            return CGSize(width: cellWidth, height: cellWidth*0.8)
+        }
 }
 

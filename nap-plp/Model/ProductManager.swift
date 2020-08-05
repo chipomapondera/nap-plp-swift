@@ -9,18 +9,12 @@
 import Foundation
 import UIKit
 
-protocol ProductManagerDelegate {
-    func getProducts(products: [ProductData.Summaries])
-}
-
 struct ProductManager {
     let productUrl = "https://api.net-a-porter.com/NAP/GB/en/1/0/summaries?categoryIds=2"
-    var delegate: ProductManagerDelegate?
     
     func fetchProducts() {
         performRequest(productURL: productUrl){(products) -> () in            
-                print(products)
-            self.delegate?.getProducts(products: products)
+                print("performRequest function is running")
         }
     }
     
