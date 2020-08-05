@@ -13,6 +13,7 @@
                 <outlet property="productImage" destination="GMJ-4P-ChK" id="DBi-Vk-Btf"/>
                 <outlet property="productName" destination="FN5-Pk-yJ7" id="as2-ks-pCw"/>
                 <outlet property="productPrice" destination="eOp-E4-ul8" id="ded-Ot-SM2"/>
+                <outlet property="productview" destination="iN0-l3-epB" id="NKk-dc-755"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

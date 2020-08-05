@@ -9,22 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
-    
+
     var productManager = ProductManager()
-    var products = [ProductData.Summaries]()
-//        = [
-//        ProductData.Summaries(name: "Print dress", badges: ["EXCLUSIVE"]),
-//        ProductData.Summaries(name: "Long dress", badges: ["SALE"]),
-//        ProductData.Summaries(name: "Striped dress", badges: ["EXCLUSIVE"])
-//    ]
+    var products: [Int:String] = [
+        1: "Print dress",
+        2: "Long dress",
+        3: "Striped dress"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self;
         collectionView.dataSource = self;
-        collectionView.register(UINib(nibName: "ProductListItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "productCell");
+        collectionView.register(UINib(nibName: K.productCellXib, bundle: nil), forCellWithReuseIdentifier: K.productCellIdentifier);
         productManager.fetchProducts();
 //        productManager.delegate = self
     }
@@ -38,25 +37,26 @@ class ViewController: UIViewController {
         print("getProducts function is running")
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1;
-    }
-    
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1;
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return products.count
-        }
+        return 1;
+//        return products.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let row = products.startIndex;
+        let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: K.productCellIdentifier, for: indexPath) as! ProductListItemCollectionViewCell;
         
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let row = products[indexPath.row];
-            let productCell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath)
-            
-            let name: String = products[0].name
-            productCell = name;
-
+        if let name = products[1] {
+            productCell.productName.text = name
+        }
     //
     //        if let price = row["price"] as? String{
     //            productCell.productPrice.text = price
@@ -69,13 +69,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     //        if let image = row["images"] as? UIImage{
     //            productCell.productImage.image = image
     //        }
-    //
-            return productCell;
-        }
         
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let cellWidth = collectionView.frame.size.width
-            return CGSize(width: cellWidth, height: cellWidth*0.8)
-        }
+        return productCell;
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellWidth = collectionView.frame.size.width
+        return CGSize(width: cellWidth, height: cellWidth*0.8)
+    }
 }
 

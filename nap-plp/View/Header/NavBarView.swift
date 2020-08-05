@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable class NavBarView: ProductListScreenView {
     
-    let xibName = "NavBarView"
+    let xibName = K.navBarXib
     
     @IBOutlet weak var backBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var accountBarButtonItem: UIBarButtonItem!

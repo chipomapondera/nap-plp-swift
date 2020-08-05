@@ -10,8 +10,9 @@ import UIKit
 
 @IBDesignable class ProductListItemCollectionViewCell: UICollectionViewCell {
     
-    let xibName = "ProductListItemCollectionViewCell"
+    let xibName = K.productCellXib
     
+    @IBOutlet var productview: UIView!
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productPrice: UILabel!

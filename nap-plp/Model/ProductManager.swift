@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct ProductManager {
-    let productUrl = "https://api.net-a-porter.com/NAP/GB/en/1/0/summaries?categoryIds=2"
+    let productUrl = K.apiKey
     
     func fetchProducts() {
         performRequest(productURL: productUrl){(products) -> () in            

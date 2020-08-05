@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable class FilterBarView: ProductListScreenView {
     
-    let xibName = "FilterBarView"
+    let xibName = K.filterBarXib
     
     @IBOutlet weak var refineLabel: UILabel!
     @IBOutlet weak var sortByLabel: UILabel!

@@ -13,7 +13,7 @@ import UIKit
     
     var view = ViewController()
     
-    let xibName = "ScreenHeaderView"
+    let xibName = K.screenHeaderXib
     
     @IBOutlet weak var categoryName: UILabel!
     @IBOutlet weak var resultsLabel: UILabel!

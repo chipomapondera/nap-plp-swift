@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable class FooterBarView: ProductListScreenView {
     
-    let xibName = "FooterBarView"
+    let xibName = K.footerBarXib
     
     @IBOutlet weak var homeFooterBarItem: UIView!
     @IBOutlet weak var designersFooterBarItem: UIView!
