@@ -9,7 +9,7 @@
 import Foundation
 
 struct K {
-    static let apiKey = "https://api.net-a-porter.com/NAP/GB/en/1/0/summaries?categoryIds=2"
+    static let apiKey = "https://api.net-a-porter.com/NAP/GB/en/10/0/summaries?categoryIds=2"
     static let navBarXib = "NavBarView"
     static let screenHeaderXib = "ScreenHeaderView"
     static let filterBarXib = "FilterBarView"

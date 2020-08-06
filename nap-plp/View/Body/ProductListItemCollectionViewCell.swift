@@ -12,11 +12,13 @@ import UIKit
     
     let xibName = K.productCellXib
     
-    @IBOutlet var productview: UIView!
+    @IBOutlet weak var productViewCell: UIView!
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productPrice: UILabel!
     @IBOutlet weak var productBadge: UILabel!
     
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 }

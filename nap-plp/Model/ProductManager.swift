@@ -12,12 +12,6 @@ import UIKit
 struct ProductManager {
     let productUrl = K.apiKey
     
-    func fetchProducts() {
-        performRequest(productURL: productUrl){(products) -> () in            
-                print("performRequest function is running")
-        }
-    }
-    
     func performRequest(productURL: String, completion: @escaping ([ProductData.Summaries]) -> Void) {
         
         if let url = URL(string: productURL) {
@@ -36,7 +30,7 @@ struct ProductManager {
         }
     }
     
-    func parseJSON(productData: Data, completion: @escaping ([ProductData.Summaries]) -> Void) {
+    private func parseJSON(productData: Data, completion: @escaping ([ProductData.Summaries]) -> Void) {
         let decoder = JSONDecoder()
         if let response = try? decoder.decode(ProductData.self, from: productData) {
             completion(response.summaries)
