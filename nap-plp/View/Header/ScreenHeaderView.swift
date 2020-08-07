@@ -23,9 +23,4 @@ import UIKit
         let xib = UINib(nibName: xibName, bundle: bundle)
         return xib.instantiate(withOwner: self, options: nil).first as? UIView
     }
-    
-//    func getResults() {
-//        let numberOfResults = view.products.count
-//        print(numberOfResults)
-//    }
 }

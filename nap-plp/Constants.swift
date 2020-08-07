@@ -13,7 +13,7 @@ struct K {
     static let navBarXib = "NavBarView"
     static let screenHeaderXib = "ScreenHeaderView"
     static let filterBarXib = "FilterBarView"
-    static let productCellXib = "ProductListItemCollectionViewCell"
+    static let productCellXib = "ProductCollectionViewCell"
     static let footerBarXib = "FooterBarView"
     static let productCellIdentifier = "productCell"
 }
