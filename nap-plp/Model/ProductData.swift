@@ -14,7 +14,7 @@ struct ProductData: Decodable {
     struct Summaries: Decodable {
 //        let id: Int
         let name: String
-//        let price: Price
+        let price: Price
         let badges: [String]
 //        let images: Images
         
@@ -22,12 +22,12 @@ struct ProductData: Decodable {
 //            print("name: \(name), id: \(id)")
 //        }
         
-//        struct Price: Decodable {
-//            let currency: String
-//            let divisor: Int
-//            let amount: Int
-//        }
-//
+        struct Price: Decodable {
+            let currency: String
+            let divisor: Int
+            let amount: Int
+        }
+
 //        struct Images: Decodable {
 //            let shots: [String]
 //        }

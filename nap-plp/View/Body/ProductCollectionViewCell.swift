@@ -35,12 +35,17 @@ class ProductCollectionViewCell: UICollectionViewCell {
     }()
     
     func setup(with product: ProductData.Summaries) {
-        
+        let currency = product.price.currency
+        let amount = product.price.amount
+        let divisor = product.price.divisor
+        let price = "\(currency)\(amount/divisor)"
         productName.text = product.name
         productBadge.text = product.badges[0]
+        productPrice.text = price
+        
+        print(price)
         
 //        productImage.image = UIImage(named: product.image) - testing simple data first
-//        productPrice.text = product.price - testing simple data first
 
     }
     

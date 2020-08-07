@@ -28,16 +28,17 @@ class ViewController: UIViewController {
     
     private func populateProducts() {
         products = [
-            ProductData.Summaries(name: "Beline smocked floral-print crepe midi dress", badges: ["NET_SUSTAIN", "In_Stock"]),
-            ProductData.Summaries(name: "Jamais cropped tie-detailed linen top", badges: ["NET_SUSTAIN", "In_Stock"]),
-            ProductData.Summaries(name: "Meridian linen wide-leg pants", badges: ["NET_SUSTAIN", "In_Stock"]),
-            ProductData.Summaries(name: "Celia belted linen shorts", badges: ["NET_SUSTAIN", "In_Stock"]),
-            ProductData.Summaries(name: "Smocked floral-print cotton-blend midi dress", badges: ["In_Stock"]),
-            ProductData.Summaries(name: "Stretch-knit top", badges: ["In_Stock"]),
-            ProductData.Summaries(name: "Ribbed wool turtleneck sweater", badges: ["In_Stock"]),
-            ProductData.Summaries(name: "Costa shirred bikini briefs", badges: ["In_Stock"]),
-            ProductData.Summaries(name: "Ribbed wool sweater", badges: ["In_Stock"]),
-            ProductData.Summaries(name: "Costa shirred bandeau bikini top ", badges: ["In_Stock"])
+
+            ProductData.Summaries(name: "Beline smocked floral-print crepe midi dress", price: nap_plp.ProductData.Summaries.Price(currency: "GBP", divisor: 100, amount: 18000), badges: ["NET_SUSTAIN", "In_Stock"]),
+            ProductData.Summaries(name: "Jamais cropped tie-detailed linen top", price: nap_plp.ProductData.Summaries.Price(currency: "GBP", divisor: 100, amount: 13238), badges: ["NET_SUSTAIN", "In_Stock"]),
+            ProductData.Summaries(name: "Meridian linen wide-leg pants", price: nap_plp.ProductData.Summaries.Price(currency: "GBP", divisor: 100, amount: 19904), badges: ["NET_SUSTAIN", "In_Stock"]),
+            ProductData.Summaries(name: "Celia belted linen shorts", price: nap_plp.ProductData.Summaries.Price(currency: "GBP", divisor: 100, amount: 16096), badges: ["NET_SUSTAIN", "In_Stock"]),
+            ProductData.Summaries(name: "Smocked floral-print cotton-blend midi dress", price: nap_plp.ProductData.Summaries.Price(currency: "GBP", divisor: 100, amount: 47297), badges: ["In_Stock"]),
+            ProductData.Summaries(name: "Stretch-knit top", price: nap_plp.ProductData.Summaries.Price(currency: "GBP", divisor: 100, amount: 29500), badges: ["In_Stock"]),
+            ProductData.Summaries(name: "Ribbed wool turtleneck sweater", price: nap_plp.ProductData.Summaries.Price(currency: "GBP", divisor: 100, amount: 36500), badges: ["In_Stock"]),
+            ProductData.Summaries(name: "Costa shirred bikini briefs", price: nap_plp.ProductData.Summaries.Price(currency: "GBP", divisor: 100, amount: 11711), badges: ["In_Stock"]),
+            ProductData.Summaries(name: "Ribbed wool sweater", price: nap_plp.ProductData.Summaries.Price(currency: "GBP", divisor: 100, amount: 34000), badges: ["In_Stock"]),
+            ProductData.Summaries(name: "Costa shirred bandeau bikini top ", price: nap_plp.ProductData.Summaries.Price(currency: "GBP", divisor: 100, amount: 11711), badges: ["In_Stock"])
         ]
     }
     
