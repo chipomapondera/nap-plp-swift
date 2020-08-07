@@ -9,13 +9,40 @@
 import UIKit
 
 class ProductCollectionViewCell: UICollectionViewCell {
+        
+    private let productImage: UIImageView = {
+        let imageView = UIImageView(frame: .zero)
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
     
-    @IBOutlet weak var productViewCell: UIView!
-    @IBOutlet weak var productImage: UIImageView!
-    @IBOutlet weak var productName: UILabel!
-    @IBOutlet weak var productPrice: UILabel!
-    @IBOutlet weak var productBadge: UILabel!
+    let productName: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textAlignment = .left
+        return label
+    }()
     
+    let productPrice: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    let productBadge: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    func setup(with product: nap_plp.ProductData.Summaries) {
+        
+        productName.text = product.name
+        productBadge.text = product.badges[0]
+        
+//        productImage.image = UIImage(named: product.image) - testing simple data first
+//        productPrice.text = product.price - testing simple data first
+
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
