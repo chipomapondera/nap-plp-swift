@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var productManager = ProductManager()
-    var products: [nap_plp.ProductData.Summaries] = []
+    var products: [ProductData.Summaries] = []
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -20,24 +20,24 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: K.productCellXib, bundle: nil), forCellWithReuseIdentifier: K.productCellIdentifier)
-//        productManager.performRequest(productURL: K.apiKey) { (Summaries) in
-//            print(Summaries)
-//        };
+        productManager.performRequest(productURL: K.apiKey) { (Summaries) in
+            print(Summaries)
+        };
         populateProducts()
     }
     
     private func populateProducts() {
         products = [
-            nap_plp.ProductData.Summaries(name: "Beline smocked floral-print crepe midi dress", badges: ["NET_SUSTAIN", "In_Stock"]),
-            nap_plp.ProductData.Summaries(name: "Jamais cropped tie-detailed linen top", badges: ["NET_SUSTAIN", "In_Stock"]),
-            nap_plp.ProductData.Summaries(name: "Meridian linen wide-leg pants", badges: ["NET_SUSTAIN", "In_Stock"]),
-            nap_plp.ProductData.Summaries(name: "Celia belted linen shorts", badges: ["NET_SUSTAIN", "In_Stock"]),
-            nap_plp.ProductData.Summaries(name: "Smocked floral-print cotton-blend midi dress", badges: ["In_Stock"]),
-            nap_plp.ProductData.Summaries(name: "Stretch-knit top", badges: ["In_Stock"]),
-            nap_plp.ProductData.Summaries(name: "Ribbed wool turtleneck sweater", badges: ["In_Stock"]),
-            nap_plp.ProductData.Summaries(name: "Costa shirred bikini briefs", badges: ["In_Stock"]),
-            nap_plp.ProductData.Summaries(name: "Ribbed wool sweater", badges: ["In_Stock"]),
-            nap_plp.ProductData.Summaries(name: "Costa shirred bandeau bikini top ", badges: ["In_Stock"])
+            ProductData.Summaries(name: "Beline smocked floral-print crepe midi dress", badges: ["NET_SUSTAIN", "In_Stock"]),
+            ProductData.Summaries(name: "Jamais cropped tie-detailed linen top", badges: ["NET_SUSTAIN", "In_Stock"]),
+            ProductData.Summaries(name: "Meridian linen wide-leg pants", badges: ["NET_SUSTAIN", "In_Stock"]),
+            ProductData.Summaries(name: "Celia belted linen shorts", badges: ["NET_SUSTAIN", "In_Stock"]),
+            ProductData.Summaries(name: "Smocked floral-print cotton-blend midi dress", badges: ["In_Stock"]),
+            ProductData.Summaries(name: "Stretch-knit top", badges: ["In_Stock"]),
+            ProductData.Summaries(name: "Ribbed wool turtleneck sweater", badges: ["In_Stock"]),
+            ProductData.Summaries(name: "Costa shirred bikini briefs", badges: ["In_Stock"]),
+            ProductData.Summaries(name: "Ribbed wool sweater", badges: ["In_Stock"]),
+            ProductData.Summaries(name: "Costa shirred bandeau bikini top ", badges: ["In_Stock"])
         ]
     }
     
@@ -60,7 +60,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-//        casting down "as! ProductCollectionViewCell" returns error: Could not cast value of type 'UICollectionViewCell' (0x7fff897dc580) to 'nap_plp.ProductCollectionViewCell' (0x106e8f018). So I can't set the properties for the cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.productCellIdentifier, for: indexPath) as! ProductCollectionViewCell
         let product = products[indexPath.row]
         cell.setup(with: product)

@@ -34,7 +34,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    func setup(with product: nap_plp.ProductData.Summaries) {
+    func setup(with product: ProductData.Summaries) {
         
         productName.text = product.name
         productBadge.text = product.badges[0]
