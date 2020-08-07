@@ -39,14 +39,14 @@ class ProductCollectionViewCell: UICollectionViewCell {
         let amount = product.price.amount
         let divisor = product.price.divisor
         let price = "\(currency)\(amount/divisor)"
+
+//        productImage.image = UIImage(named: product.image) - testing simple data first
         productName.text = product.name
         productBadge.text = product.badges[0]
         productPrice.text = price
         
         print(price)
-        
-//        productImage.image = UIImage(named: product.image) - testing simple data first
-
+    
     }
     
     override func awakeFromNib() {

@@ -10,9 +10,7 @@ import UIKit
 
 
 @IBDesignable class ScreenHeaderView: ProductListScreenView {
-    
-    var view = ViewController()
-    
+        
     let xibName = K.screenHeaderXib
     
     @IBOutlet weak var categoryName: UILabel!

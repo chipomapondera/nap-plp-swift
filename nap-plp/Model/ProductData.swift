@@ -12,15 +12,11 @@ struct ProductData: Decodable {
     let summaries: [Summaries]
     
     struct Summaries: Decodable {
-//        let id: Int
+        let id: Int
         let name: String
         let price: Price
         let badges: [String]
 //        let images: Images
-        
-//        func getString() {
-//            print("name: \(name), id: \(id)")
-//        }
         
         struct Price: Decodable {
             let currency: String

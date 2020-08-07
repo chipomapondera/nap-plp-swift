@@ -35,6 +35,11 @@
                                 <rect key="frame" x="0.0" y="191" width="414" height="586"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tps-Qn-sBF" customClass="FilterBarView" customModule="nap_plp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="264" width="414" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wIa-AA-gI1">
                                         <rect key="frame" x="20" y="74" width="374" height="504"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -61,11 +66,6 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="Ns4-sW-bT3"/>
                                         </connections>
                                     </collectionView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tps-Qn-sBF" customClass="FilterBarView" customModule="nap_plp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
