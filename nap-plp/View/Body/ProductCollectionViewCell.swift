@@ -10,29 +10,35 @@ import UIKit
 
 class ProductCollectionViewCell: UICollectionViewCell {
         
-    private let productImage: UIImageView = {
-        let imageView = UIImageView(frame: .zero)
-        imageView.contentMode = .scaleAspectFill
-        return imageView
-    }()
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
+    @IBOutlet weak var productBadge: UILabel!
     
-    let productName: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.textAlignment = .left
-        return label
-    }()
     
-    let productPrice: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    let productBadge: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.textAlignment = .left
-        return label
-    }()
+//    private let productImage: UIImageView = {
+//        let imageView = UIImageView(frame: .zero)
+//        imageView.contentMode = .scaleAspectFill
+//        return imageView
+//    }()
+//
+//    let productName: UILabel! = {
+//        let label = UILabel(frame: .zero)
+//        label.textAlignment = .left
+//        return label
+//    }()
+//
+//    let productPrice: UILabel = {
+//        let label = UILabel(frame: .zero)
+//        label.textAlignment = .left
+//        return label
+//    }()
+//
+//    let productBadge: UILabel = {
+//        let label = UILabel(frame: .zero)
+//        label.textAlignment = .left
+//        return label
+//    }()
     
     func setup(with product: ProductData.Summaries) {
         let currency = product.price.currency
@@ -45,7 +51,9 @@ class ProductCollectionViewCell: UICollectionViewCell {
         productBadge.text = product.badges[0]
         productPrice.text = price
         
-        print(price)
+        print(productName.text!)
+        print(productBadge.text!)
+        print(productPrice.text!)
     
     }
     
