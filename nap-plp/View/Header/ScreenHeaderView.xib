@@ -9,8 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScreenHeaderView" customModule="nap_plp" customModuleProvider="target">
             <connections>
-                <outlet property="categoryName" destination="efJ-sq-ODF" id="cee-Q7-tjJ"/>
-                <outlet property="resultsLabel" destination="FMA-S0-tGo" id="BIt-ux-QeE"/>
+                <outlet property="categoryName" destination="efJ-sq-ODF" id="qMR-37-y0D"/>
+                <outlet property="resultsLabel" destination="FMA-S0-tGo" id="6YS-J2-fcr"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

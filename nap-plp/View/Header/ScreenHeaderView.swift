@@ -15,7 +15,7 @@ import UIKit
     
     @IBOutlet weak var categoryName: UILabel!
     @IBOutlet weak var resultsLabel: UILabel!
-        
+    
     override func loadViewFromXib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let xib = UINib(nibName: xibName, bundle: bundle)

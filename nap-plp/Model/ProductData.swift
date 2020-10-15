@@ -13,20 +13,20 @@ struct ProductData: Decodable {
     
     struct Summaries: Decodable {
         let id: Int
+        let image: Image
         let name: String
         let price: Price
         let badges: [String]
-//        let images: Images
+        
+        struct Image: Decodable {
+            let urlTemplate: String
+        }
         
         struct Price: Decodable {
             let currency: String
             let divisor: Int
             let amount: Int
         }
-
-//        struct Images: Decodable {
-//            let shots: [String]
-//        }
 
     }
 }
